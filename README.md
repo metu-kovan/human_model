@@ -11,9 +11,9 @@ You can change model with directory name under urdf directory(default female2)
 
 #Help
 For source code You can use the following
->python
->import animator
->help(animator) help(animator.JointTree) etc.
+>python  
+>import animator  
+>help(animator) help(animator.JointTree) etc.  
 
 #URDF Directory Structure
 Every directory indicates a different model. General structure of directory is:  
