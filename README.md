@@ -16,13 +16,13 @@ For source code You can use the following
 >help(animator) help(animator.JointTree) etc.
 
 #URDF Directory Structure
-Every directory indicates a different model. General structure of directory is:
-__meshes directory:__ contains Collada files used in models.xacro
+Every directory indicates a different model. General structure of directory is:  
+__meshes directory:__ contains Collada files used in models.xacro  
 __tree.json :__ contains tree structure needed for animator.py .If a value is omitted,default
-value will be used. Default values can be found with help(animator.JointTree.\_\_init\_\_)
+value will be used. Default values can be found with help(animator.JointTree.\_\_init\_\_)  
 __model.xacro:__ evaluated to create urdf file used by RViz by launch file.General macros used for
-multiple models are:
-<xacro:link_to_world link="link name" mesh="name of the mesh" scale="scale of the mesh"/>
-<xacro:link_without_geo link="link name"/>
-<xacro:connector link="link name" mesh="name of the mesh" scale="scale of the mesh"/>
-<xacro:connector_without_geo link="link name"/>
+multiple models are:  
+<xacro:link_to_world link="link name" mesh="name of the mesh" scale="scale of the mesh"/>  
+<xacro:link_without_geo link="link name"/>  
+<xacro:connector link="link name" mesh="name of the mesh" scale="scale of the mesh"/>  
+<xacro:connector_without_geo link="link name"/>  
