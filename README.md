@@ -7,7 +7,7 @@ Copy the files under the ROS workspace
 -Run Singeleton Server
 -roslaunch icub_arm_imitator imitator_online.launch
 -roslaunch human_model human_model.launch (model:=female2)
-You can change model with directory name under urdf directory(default female2)
+You can change model with directory name under urdf directory(default female3)
 
 #Help
 For source code You can use the following
