@@ -15,10 +15,10 @@
   <run_depend>tf</run_depend>
 
   <export>
-	  All project is licensed with the GPLv3 with  the exception of all blend files and meshes
-	  in meshes directory in female,female2 and female directories under urdf
-	  directory except ArmLower.dae,ArmUpper.dae,LegUpper.dae in female2 and female3. These meshes 
-	  are derivatives of "Complete Female Character"(http://www.blendswap.com/blends/view/22783)
-	  by Bhavin Solanki,used under CC BY and licensed under CC BY by Bilgin Coşkun
+  All project is licensed with the GPLv3 with  the exception of all blend files and meshes
+  in meshes directory in female,female2 and female directories under urdf
+  directory except ArmLower.dae,ArmUpper.dae,LegUpper.dae in female2 and female3. These meshes 
+  are derivatives of "Complete Female Character"(http://www.blendswap.com/blends/view/22783)
+  by Bhavin Solanki,used under CC BY and licensed under CC BY by Bilgin Coşkun
   </export>
 </package>
