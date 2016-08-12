@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://playerstage.sourceforge.net/gazebo/xmlschema/#interface" name="primal_human"> 
+	
+	<xacro:arg name="model" default="simple"/>
+
+	<xacro:macro name="load_mesh" params="mesh scale">
+		<mesh filename="package://human_model/urdf/$(arg model)/meshes/${mesh}.dae" scale="${scale}"/>
+	</xacro:macro>
+		
+    <xacro:macro name="link_to_world" params="link mesh scale">
+         <link name="${link}_link">
+             <visual>
+                 <geometry>
+					 <xacro:load_mesh mesh="${mesh}" scale="${scale}"/>
+                 </geometry>
+             </visual>
+         </link>
+         <joint name="world_to_${link}" type="floating">
+            <parent link="world"/>
+            <child link="${link}_link"/>
+         </joint>
+    </xacro:macro>
+    
+    <xacro:macro name="link_without_geo" params="link">
+		<xacro:link_to_world link="${link}" mesh="" scale="0 0 0"/>
+    </xacro:macro>  
+    
+    <xacro:macro name="connector" params="link1 link2 mesh scale">
+      <link name="${link1}_${link2}">
+             <visual>
+                 <geometry>
+                     <xacro:load_mesh mesh="${mesh}" scale="${scale}"/>
+                 </geometry>
+             </visual>
+         </link>
+         <joint name="${link1}_${link2}_joint" type="fixed">
+             <parent link="world"/>
+            <child link="${link1}_${link2}"/>
+         </joint>    
+    </xacro:macro>
+    
+     <xacro:macro name="connector_without_geo" params="link1 link2">
+		<xacro:connector link1="${link1}" link2="${link2}" mesh="" scale="0 0 0"/>
+    </xacro:macro>    
+	
+    <xacro:macro name="link_sphere" params="link r">
+         <xacro:link_to_world link="${link}" mesh="Sphere" scale="${r} ${r} ${r}"/>
+    </xacro:macro>
+
+
+    <link name="world"/>
+
+    <xacro:link_sphere link="AnkleLeft" r="0.04"/>
+    <xacro:link_sphere link="AnkleRight" r="0.04"/>
+    <xacro:link_sphere link="ElbowLeft" r="0.05"/>
+    <xacro:link_sphere link="ElbowRight" r="0.05"/>
+    <xacro:link_without_geo link="FootLeft"/>
+    <xacro:link_without_geo link="FootRight"/>
+    <xacro:link_sphere link="HandLeft" r="0.025"/>
+    <xacro:link_sphere link="HandRight" r="0.025"/>
+    <xacro:link_without_geo link="HandTipLeft"/>
+    <xacro:link_without_geo link="HandTipRight"/>
+    <xacro:link_sphere link="Head" r="0.1"/>
+    <xacro:link_sphere link="HipLeft" r="0.05"/>
+    <xacro:link_sphere link="HipRight" r="0.05"/>
+    <xacro:link_sphere link="KneeLeft" r="0.05"/>
+    <xacro:link_sphere link="KneeRight" r="0.05"/>
+    <xacro:link_sphere link="Neck" r="0.05"/> 
+    <xacro:link_sphere link="ShoulderLeft" r="0.06"/>
+    <xacro:link_sphere link="ShoulderRight" r="0.06"/>
+    <xacro:link_sphere link="SpineBase" r="0.0"/>
+    <xacro:link_sphere link="SpineMid" r="0.04"/>
+    <xacro:link_sphere link="SpineShoulder" r="0.04"/>
+    <xacro:link_without_geo link="ThumbLeft"/>
+    <xacro:link_without_geo link="ThumbRight"/>
+    <xacro:link_sphere link="WristLeft" r="0.04"/>
+    <xacro:link_sphere link="WristRight" r="0.04"/>
+
+    <xacro:connector link1="ShoulderLeft" link2="ElbowLeft" mesh="Limb" scale="0.15 0.15 0.15"/>
+    <xacro:connector link1="ShoulderRight" link2="ElbowRight" mesh="Limb" scale="0.15 0.15 0.15"/>
+    <xacro:connector link1="ElbowLeft" link2="WristLeft" mesh="Limb" scale="0.15 0.15 0.13"/>
+    <xacro:connector link1="ElbowRight" link2="WristRight" mesh="Limb" scale="0.15 0.15 0.13"/>
+    <xacro:connector link1="SpineShoulder" link2="ShoulderLeft" mesh="Limb" scale="0.15 0.15 0.1"/>
+    <xacro:connector link1="SpineShoulder" link2="ShoulderRight" mesh="Limb" scale="0.15 0.15 0.1"/>
+    <xacro:connector link1="SpineMid" link2="SpineShoulder" mesh="Torso" scale="0.15 0.15 0.18"/>
+    <xacro:connector link1="SpineMid" link2="SpineBase" mesh="Torso" scale="0.15 0.15 -0.18"/>
+    <xacro:connector link1="HipLeft" link2="KneeLeft" mesh="Limb" scale="0.2 0.2 0.15"/>
+    <xacro:connector link1="HipRight" link2="KneeRight" mesh="Limb" scale="0.2 0.2 0.15"/>
+    <xacro:connector link1="KneeLeft" link2="AnkleLeft" mesh="Limb" scale="0.2 0.2 0.2"/>
+    <xacro:connector link1="KneeRight" link2="AnkleRight" mesh="Limb" scale="0.2 0.2 0.2"/>
+    <xacro:connector link1="AnkleLeft" link2="FootLeft" mesh="Foot" scale="0.055 0.055 0.055"/>
+    <xacro:connector link1="AnkleRight" link2="FootRight" mesh="Foot" scale="0.055 0.055 0.055"/>
+    <xacro:connector_without_geo link1="WristLeft" link2="HandLeft"/>
+    <xacro:connector_without_geo link1="WristRight" link2="HandRight"/>
+    <xacro:connector_without_geo link1="HandLeft" link2="ThumbLeft"/>
+    <xacro:connector_without_geo link1="HandRight" link2="ThumbRight"/>
+    <xacro:connector link1="HandLeft" link2="HandTipLeft" mesh="Hand" scale="0.05 0.04 0.03"/>
+    <xacro:connector link1="HandRight" link2="HandTipRight" mesh="Hand" scale="0.05 -0.04 0.03"/>
+
+</robot>

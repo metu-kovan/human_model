@@ -1,0 +1,222 @@
+{
+ "SpineMid": {
+  "length": 0.0, 
+  "invert": false, 
+  "fixedFrame": [
+   0.0, 
+   0.0, 
+   1.0
+  ], 
+  "children": [
+   {
+    "SpineBase": {
+     "length": 0.3, 
+     "invert": false, 
+     "fixedFrame": null, 
+     "children": [
+      {
+       "HipLeft": {
+        "length": 0.085, 
+        "invert": false, 
+        "fixedFrame": null, 
+        "children": [
+         {
+          "KneeLeft": {
+           "length": 0.42, 
+           "invert": false, 
+           "fixedFrame": null, 
+           "children": [
+            {
+             "AnkleLeft": {
+              "length": 0.5, 
+              "invert": false, 
+              "fixedFrame": null, 
+              "children": [
+               {
+                "FootLeft": {
+                 "length": 0.11, 
+                 "invert": false, 
+                 "fixedFrame": null, 
+                 "children": []
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }, 
+      {
+       "HipRight": {
+        "length": 0.085, 
+        "invert": false, 
+        "fixedFrame": null, 
+        "children": [
+         {
+          "KneeRight": {
+           "length": 0.42, 
+           "invert": false, 
+           "fixedFrame": null, 
+           "children": [
+            {
+             "AnkleRight": {
+              "length": 0.5, 
+              "invert": false, 
+              "fixedFrame": null, 
+              "children": [
+               {
+                "FootRight": {
+                 "length": 0.11, 
+                 "invert": false, 
+                 "fixedFrame": null, 
+                 "children": []
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }, 
+   {
+    "SpineShoulder": {
+     "length": 0.28, 
+     "invert": true, 
+     "fixedFrame": null, 
+     "children": [
+      {
+       "ShoulderLeft": {
+        "length": 0.14, 
+        "invert": false, 
+        "fixedFrame": null, 
+        "children": [
+         {
+          "ElbowLeft": {
+           "length": 0.26, 
+           "invert": false, 
+           "fixedFrame": null, 
+           "children": [
+            {
+             "WristLeft": {
+              "length": 0.25, 
+              "invert": false, 
+              "fixedFrame": null, 
+              "children": [
+               {
+                "HandLeft": {
+                 "length": 0.15, 
+                 "invert": false, 
+                 "fixedFrame": null, 
+                 "children": [
+                  {
+                   "HandTipLeft": {
+                    "length": 0.05, 
+                    "invert": false, 
+                    "fixedFrame": null, 
+                    "children": []
+                   }
+                  }, 
+                  {
+                   "ThumbLeft": {
+                    "length": 0.0625, 
+                    "invert": false, 
+                    "fixedFrame": null, 
+                    "children": []
+                   }
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }, 
+      {
+       "ShoulderRight": {
+        "length": 0.14, 
+        "invert": false, 
+        "fixedFrame": null, 
+        "children": [
+         {
+          "ElbowRight": {
+           "length": 0.26, 
+           "invert": false, 
+           "fixedFrame": null, 
+           "children": [
+            {
+             "WristRight": {
+              "length": 0.25, 
+              "invert": false, 
+              "fixedFrame": null, 
+              "children": [
+               {
+                "HandRight": {
+                 "length": 0.15, 
+                 "invert": false, 
+                 "fixedFrame": null, 
+                 "children": [
+                  {
+                   "HandTipRight": {
+                    "length": 0.05, 
+                    "invert": false, 
+                    "fixedFrame": null, 
+                    "children": []
+                   }
+                  }, 
+                  {
+                   "ThumbRight": {
+                    "length": 0.0625, 
+                    "invert": false, 
+                    "fixedFrame": null, 
+                    "children": []
+                   }
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }, 
+      {
+       "Neck": {
+        "length": 0.0765, 
+        "invert": false, 
+        "fixedFrame": null, 
+        "children": [
+         {
+          "Head": {
+           "length": 0.1, 
+           "invert": true, 
+           "fixedFrame": null, 
+           "children": []
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

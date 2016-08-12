@@ -1,0 +1,153 @@
+{
+ "SpineMid": {
+  "fixedFrame": [ 0.0, 0.0, 1.0 ], 
+  "children": [
+   {
+    "SpineBase": {
+     "length": 0.2, 
+     "children": [
+      {
+       "HipLeft": {
+        "length": 0.085, 
+        "children": [
+         {
+          "KneeLeft": {
+           "length": 0.3, 
+           "children": [
+            {
+             "AnkleLeft": {
+              "length": 0.5, 
+              "children": [{
+                "FootLeft": {
+                 "length": 0.11
+                }}]}}]}}]}}, 
+      {
+       "HipRight": {
+        "length": 0.085, 
+        "children": [
+         {
+          "KneeRight": {
+           "length": 0.3, 
+           "children": [
+            {
+             "AnkleRight": {
+              "length": 0.5,  
+              "children": [
+               {
+                "FootRight": {
+                 "length": 0.11
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }, 
+   {
+    "SpineShoulder": {
+     "length": 0.28, 
+     "invert": true, 
+     "children": [
+      {
+       "ShoulderLeft": {
+        "length": 0.14,  
+        "children": [
+         {
+          "ElbowLeft": {
+           "length": 0.26, 
+           "children": [
+            {
+             "WristLeft": {
+              "length": 0.25, 
+              "children": [
+               {
+                "HandLeft": {
+                 "length": 0.15, 
+                 "children": [
+                  {
+                   "HandTipLeft": {
+                    "length": 0.05, 
+                    "children": []
+                   }
+                  }, 
+                  {
+                   "ThumbLeft": {
+                    "length": 0.0625
+                   }
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }, 
+      {
+       "ShoulderRight": {
+        "length": 0.14, 
+        "children": [
+         {
+          "ElbowRight": {
+           "length": 0.26,
+           "children": [
+            {
+             "WristRight": {
+              "length": 0.25, 
+              "children": [
+               {
+                "HandRight": {
+                 "length": 0.15, 
+                 "children": [
+                  {
+                   "HandTipRight": {
+                    "length": 0.05
+                   }
+                  }, 
+                  {
+                   "ThumbRight": {
+                    "length": 0.0625
+                   }
+                  }
+                 ]
+                }
+               }
+              ]
+             }
+            }
+           ]
+          }
+         }
+        ]
+       }
+      }, 
+      {
+       "Neck": {
+        "length": 0.0765,
+        "children": [
+         {
+          "Head": {
+           "length": 0.1, 
+           "invert": true
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   }
+  ]
+ }
+}

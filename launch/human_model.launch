@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+ <launch>
+	 <arg name="model" default="female3"/>
+	 <param name="tree" textfile="$(find human_model)/urdf/$(arg model)/tree.json"/>	 
+     <param name="robot_description" command="rosrun xacro xacro $(find human_model)/urdf/$(arg model)/model.xacro --inorder model:=$(arg model)"/>
+     <node pkg="human_model" type="animator.py" name="animator" output="screen"/>
+     <node name="rviz" pkg="rviz" type="rviz" args="-d $(find human_model)/rviz/human_model.rviz"  />
+ </launch>
