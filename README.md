@@ -4,17 +4,11 @@ ROS Package for Drawing Human Model in RViz
 Copy the files under the ROS workspace
 
 #Example Execution
-<<<<<<< HEAD
--Run Singeleton Server
--roslaunch icub_arm_imitator imitator_online.launch
--roslaunch human_model human_model.launch (model:=female2)
-You can change model with directory name under urdf directory (default female3)
-=======
+
 -Run Singeleton Server  
 -roslaunch icub_arm_imitator imitator_online.launch  
 -roslaunch human_model human_model.launch (model:=female2)  
 You can change model with directory name under urdf directory(default female3)  
->>>>>>> origin/master
 
 #Help
 For source code You can use the following
